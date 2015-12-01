@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="text/javascript">
+		if (document.images){
+		var face1 = document.createElement("img");
+		face1.src = "d1.png";
+		var face2 = document.createElement("img");
+		face2.src = "d2.png";
+		var face3 = document.createElement("img");
+		face3.src = "d3.png";
+		var face4 = document.createElement("img");
+		face4.src = "d4.png";
+		var face5 = document.createElement("img");
+		face5.src = "d5.png";
+		var face6 = document.createElement("img");
+		face6.src = "d6.png";
+	}
+	</script>
+
+	<div class="header">
+		<h1>Random Dice Generator!</h1>
+	</div>
+    
+    <div class="content_container">
+		<div class="dice">
+			<img src="d1.png" name="mydice">
+		</div>
+
+		<div class="button">
+			<button type="button" id="diceButton" onclick="throwDice()">Throw Dice</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function throwDice() {
+		x = Math.random() * 6;
+		y = Math.ceil(x)
+		document.images["mydice"].src=eval("face"+ y +".src")
+	}
+	</script>
+</body>
+</html>
